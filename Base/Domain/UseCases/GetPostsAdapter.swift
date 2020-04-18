@@ -30,6 +30,5 @@ final class GetPostsAdapter: GetPostsUseCase {
                 completion(.failure(error))
             }
         }
-
     }
 }
