@@ -28,6 +28,12 @@
 		D76F3EC2244AE5A900E8134F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC1244AE5A900E8134F /* Router.swift */; };
 		D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC4244AEDF100E8134F /* PostViewModel.swift */; };
 		D7E08DAF244BB03F00AF6001 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DAE244BB03F00AF6001 /* Constants.swift */; };
+		D7E08DB3244BBA6400AF6001 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E08DB2244BBA6400AF6001 /* Detail.storyboard */; };
+		D7E08DB5244BBA9600AF6001 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DB4244BBA9600AF6001 /* DetailViewController.swift */; };
+		D7E08DB7244BBADC00AF6001 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DB6244BBADC00AF6001 /* DetailInteractor.swift */; };
+		D7E08DB9244BBAED00AF6001 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DB8244BBAED00AF6001 /* DetailPresenter.swift */; };
+		D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBA244BBEB500AF6001 /* Comment.swift */; };
+		D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBC244BBEBF00AF6001 /* User.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +78,12 @@
 		D76F3EC1244AE5A900E8134F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D76F3EC4244AEDF100E8134F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		D7E08DAE244BB03F00AF6001 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D7E08DB2244BBA6400AF6001 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		D7E08DB4244BBA9600AF6001 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D7E08DB6244BBADC00AF6001 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		D7E08DB8244BBAED00AF6001 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		D7E08DBA244BBEB500AF6001 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D7E08DBC244BBEBF00AF6001 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D700B9CF244AA79600B2805E /* Home */,
+				D7E08DB0244BB88300AF6001 /* Detail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -215,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				D700BA1D244ABB7300B2805E /* Post.swift */,
+				D7E08DBA244BBEB500AF6001 /* Comment.swift */,
+				D7E08DBC244BBEBF00AF6001 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -261,6 +276,25 @@
 				D76F3EC4244AEDF100E8134F /* PostViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D7E08DB0244BB88300AF6001 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D7E08DB1244BBA5200AF6001 /* View */,
+				D7E08DB4244BBA9600AF6001 /* DetailViewController.swift */,
+				D7E08DB6244BBADC00AF6001 /* DetailInteractor.swift */,
+				D7E08DB8244BBAED00AF6001 /* DetailPresenter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		D7E08DB1244BBA5200AF6001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7E08DB2244BBA6400AF6001 /* Detail.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EA085DA36DFC419E4C99D6FE /* Pods */ = {
@@ -361,6 +395,7 @@
 				D700B9B5244AA69800B2805E /* LaunchScreen.storyboard in Resources */,
 				D700B9B2244AA69800B2805E /* Assets.xcassets in Resources */,
 				D700B9B0244AA69400B2805E /* Main.storyboard in Resources */,
+				D7E08DB3244BBA6400AF6001 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,21 +478,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */,
+				D7E08DB5244BBA9600AF6001 /* DetailViewController.swift in Sources */,
 				D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */,
+				D7E08DB7244BBADC00AF6001 /* DetailInteractor.swift in Sources */,
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
 				D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */,
 				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
 				D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */,
 				D700B9A9244AA69400B2805E /* AppDelegate.swift in Sources */,
 				D7E08DAF244BB03F00AF6001 /* Constants.swift in Sources */,
+				D7E08DB9244BBAED00AF6001 /* DetailPresenter.swift in Sources */,
 				D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */,
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
 				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
+				D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */,
 				D76F3EC2244AE5A900E8134F /* Router.swift in Sources */,
 				D700BA1E244ABB7300B2805E /* Post.swift in Sources */,
 				D76F3EBC244AD80000E8134F /* GetPostsWebService.swift in Sources */,
 				D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */,
+				D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
