@@ -117,10 +117,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        guard let post = posts?[indexPath.row] else {
+            return cell
+        }
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        cell.imageView?.image = posts?[indexPath.row].icon
+        cell.imageView?.image = post.icon
         cell.textLabel?.text = posts?[indexPath.row].model.body
-        cell.textLabel?.numberOfLines = 0 
+        cell.textLabel?.numberOfLines = 0
+        
+        if post.hasBeenRead {
+            cell.imageView?.tintColor = UIColor.white
+        }
         
         return cell
     }

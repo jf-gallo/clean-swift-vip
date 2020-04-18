@@ -12,13 +12,13 @@ import UIKit
 struct PostViewModel {
     let model: Post
     var isFavorite: Bool = false
-    var hasBeenRead: Bool = false
+    var hasBeenRead: Bool = true
     
     var icon: UIImage? {
         if isFavorite {
             return UIImage.init(systemName: "star")
         } else {
-            return hasBeenRead ? nil : UIImage.init(systemName: "circle.fill")
+            return hasBeenRead ? UIImage.init(systemName: "checkmark") : UIImage.init(systemName: "circle.fill")
         }
     }
     

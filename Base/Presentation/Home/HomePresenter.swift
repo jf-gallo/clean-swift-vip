@@ -55,7 +55,10 @@ class HomePresenter: HomePresentationLogic {
     }
     
     private func getViewModels(from posts: [Post]) -> [PostViewModel] {
-        let posts = posts.compactMap({ return PostViewModel(model: $0)})
+        var posts = posts.compactMap({ return PostViewModel(model: $0)})
+        for i in 0..<20 {
+            posts[i].hasBeenRead = false
+        }
         self.posts = posts
         return posts
     }
