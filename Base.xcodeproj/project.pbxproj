@@ -36,6 +36,9 @@
 		D700BA17244AB59E00B2805E /* WebServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA15244AB59E00B2805E /* WebServiceAdapter.swift */; };
 		D700BA18244AB59E00B2805E /* GetWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA16244AB59E00B2805E /* GetWebService.swift */; };
 		D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA19244AB7A300B2805E /* APIConstants.swift */; };
+		D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */; };
+		D700BA1E244ABB7300B2805E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1D244ABB7300B2805E /* Post.swift */; };
+		D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		D700BA15244AB59E00B2805E /* WebServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceAdapter.swift; sourceTree = "<group>"; };
 		D700BA16244AB59E00B2805E /* GetWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetWebService.swift; sourceTree = "<group>"; };
 		D700BA19244AB7A300B2805E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsUseCase.swift; sourceTree = "<group>"; };
+		D700BA1D244ABB7300B2805E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D700B9CE244AA78500B2805E /* Protocols */,
+				D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 		D700B9CE244AA78500B2805E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 		D700B9D7244AA90700B2805E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D700BA1D244ABB7300B2805E /* Post.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 				D700B9FB244AB20500B2805E /* ParameterEncoding.swift in Sources */,
 				D700BA0D244AB20500B2805E /* Webservice.swift in Sources */,
 				D700BA0E244AB20500B2805E /* Response.swift in Sources */,
+				D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */,
 				D700BA11244AB20500B2805E /* NetworkLogger.swift in Sources */,
 				D700B9F9244AB20500B2805E /* JSONSerializer.swift in Sources */,
 				D700B9FA244AB20500B2805E /* EnvironmentSetup.swift in Sources */,
@@ -415,6 +425,7 @@
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
 				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
 				D700B9FD244AB20500B2805E /* JSONParameterEncoder.swift in Sources */,
+				D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */,
 				D700BA0F244AB20500B2805E /* Request.swift in Sources */,
 				D700BA18244AB59E00B2805E /* GetWebService.swift in Sources */,
 				D700B9A9244AA69400B2805E /* AppDelegate.swift in Sources */,
@@ -425,6 +436,7 @@
 				D700BA10244AB20500B2805E /* Router.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
 				D700BA07244AB20500B2805E /* NetworkError.swift in Sources */,
+				D700BA1E244ABB7300B2805E /* Post.swift in Sources */,
 				D700BA09244AB20500B2805E /* NetworkRouter.swift in Sources */,
 				D700BA17244AB59E00B2805E /* WebServiceAdapter.swift in Sources */,
 			);

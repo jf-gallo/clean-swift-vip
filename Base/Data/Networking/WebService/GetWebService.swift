@@ -8,25 +8,18 @@
 
 import Foundation
 
-//enum GetPostsService {
-//
-//    case getUser
-//}
+enum GetPostsService {
+    case get(parameters: RequestParameters?)
+}
 
 struct GetWebserviceDependencies {
     
 }
 
-struct GetPostsService: WebService {
-    
-    let parameters: RequestParameters?
-    
-    init(parameters: RequestParameters? = nil){
-        self.parameters = parameters
-    }
-        
+extension GetPostsService: WebService {
+                
     var requestParameters: RequestParameters? {
-        return parameters
+        return nil
     }
     
     var environmentBaseURL : String {
@@ -52,7 +45,7 @@ struct GetPostsService: WebService {
     var task: HTTPTask? {
         
         return .requestParametersAndHeaders(bodyParameters: nil,
-                                            urlParameters: parameters,
+                                            urlParameters: requestParameters,
                                             bodyFormData: nil)
     }
     

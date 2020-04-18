@@ -9,11 +9,12 @@
 import Foundation
 
 struct InteractorDependencies {
-    
+    let getPosts: GetPostsUseCase = GetPostsAdapter()
 }
 
 protocol HomeBusinessLogic {
     var dependencies: InteractorDependencies { get }
+    func getPosts()
 }
 
 final class HomeInteractor: HomeBusinessLogic {
@@ -25,6 +26,17 @@ final class HomeInteractor: HomeBusinessLogic {
     init(presenter: HomePresentationLogic, dependencies: InteractorDependencies = .init()){
         self.presenter = presenter
         self.dependencies = dependencies
+    }
+    
+    func getPosts() {
+        dependencies.getPosts.execute(request: nil) { [weak self] (response) in
+            switch response {
+            case .success(let posts):
+                break
+            case .failure(let error):
+                break
+            }
+        }
     }
     
 }

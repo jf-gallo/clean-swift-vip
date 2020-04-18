@@ -27,6 +27,8 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         let presenter = HomePresenter.init(viewController: self)
         let interactor = HomeInteractor(presenter: presenter)
         self.interactor = interactor
+        
+        interactor.getPosts()
     }
     
     /*

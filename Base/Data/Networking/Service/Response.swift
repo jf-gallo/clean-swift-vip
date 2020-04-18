@@ -1,6 +1,5 @@
 //
 //  Response.swift
-//  jogo-ios
 //
 //  Created by Juan Felipe Gallo on 9/24/19.
 //  Copyright © 2019 jogo. All rights reserved.

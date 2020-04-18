@@ -10,13 +10,24 @@ import Foundation
 
 protocol HomePresentationLogic: class {
     var viewController: HomeDisplayLogic? { get }
+    func present(posts: [Post])
+    func present(failiure: String)
 }
 
 class HomePresenter: HomePresentationLogic {
+    
     weak var viewController: HomeDisplayLogic?
     
     init(viewController: HomeDisplayLogic){
         self.viewController = viewController
+    }
+    
+    func present(posts: [Post]) {
+        
+    }
+    
+    func present(failiure: String) {
+        
     }
 
 }

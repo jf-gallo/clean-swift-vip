@@ -25,3 +25,36 @@ extension Dictionary where Key == String {
     }
     
 }
+
+public extension Decodable {
+     static func parse(from dictionary: [String: Any]) -> [Self]? {
+        do {
+            let decoder = JSONDecoder()
+            let data = try JSONSerialization.data(withJSONObject: dictionary, options: [])
+            return try decoder.decode([Self].self, from: data)
+        } catch {
+            return nil
+        }
+    }
+    
+     static func parseEntity(from dictionary: [String: Any]) -> Self? {
+        do {
+            let decoder = JSONDecoder()
+            let data = try JSONSerialization.data(withJSONObject: dictionary, options: [])
+            return try decoder.decode(Self.self, from: data)
+        } catch {
+            return nil
+        }
+    }
+    
+    static func parse(from arrayOfDictionaries: [[String: Any]]) -> [Self]? {
+        do {
+            let decoder = JSONDecoder()
+            let data = try JSONSerialization.data(withJSONObject: arrayOfDictionaries, options: [])
+            return try decoder.decode([Self].self, from: data)
+        } catch {
+            return nil
+        }
+    }
+}
+
