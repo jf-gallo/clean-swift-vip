@@ -22,9 +22,10 @@
 		D700BA1E244ABB7300B2805E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1D244ABB7300B2805E /* Post.swift */; };
 		D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */; };
 		D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA4F244AC4C500B2805E /* SceneDelegate.swift */; };
-		D76F3EBC244AD80000E8134F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBB244AD80000E8134F /* BaseService.swift */; };
+		D76F3EBC244AD80000E8134F /* GetPostsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBB244AD80000E8134F /* GetPostsWebService.swift */; };
 		D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBD244AD88200E8134F /* Parameters.swift */; };
 		D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBF244AD8DD00E8134F /* Response.swift */; };
+		D76F3EC2244AE5A900E8134F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC1244AE5A900E8134F /* Router.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,9 +64,10 @@
 		D700BA1D244ABB7300B2805E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsAdapter.swift; sourceTree = "<group>"; };
 		D700BA4F244AC4C500B2805E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D76F3EBB244AD80000E8134F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		D76F3EBB244AD80000E8134F /* GetPostsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsWebService.swift; sourceTree = "<group>"; };
 		D76F3EBD244AD88200E8134F /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		D76F3EBF244AD8DD00E8134F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D76F3EC1244AE5A900E8134F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +217,11 @@
 		D700B9D8244AB20500B2805E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D76F3EBF244AD8DD00E8134F /* Response.swift */,
 				D76F3EBD244AD88200E8134F /* Parameters.swift */,
 				D76F3EBA244AD7DA00E8134F /* Parser */,
 				D76F3EB9244AD7B600E8134F /* WebService */,
-				D76F3EBF244AD8DD00E8134F /* Response.swift */,
+				D76F3EC1244AE5A900E8134F /* Router.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -234,7 +237,7 @@
 		D76F3EB9244AD7B600E8134F /* WebService */ = {
 			isa = PBXGroup;
 			children = (
-				D76F3EBB244AD80000E8134F /* BaseService.swift */,
+				D76F3EBB244AD80000E8134F /* GetPostsWebService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -435,8 +438,9 @@
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
 				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
+				D76F3EC2244AE5A900E8134F /* Router.swift in Sources */,
 				D700BA1E244ABB7300B2805E /* Post.swift in Sources */,
-				D76F3EBC244AD80000E8134F /* BaseService.swift in Sources */,
+				D76F3EBC244AD80000E8134F /* GetPostsWebService.swift in Sources */,
 				D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import Alamofire
 
 enum ServiceResponse<T> {
     case success([T]?)
-    case failure(AFError?)
+    case failure(Error?)
 }
 
 typealias serviceCompletion<T> = (ServiceResponse<T>) -> Void
