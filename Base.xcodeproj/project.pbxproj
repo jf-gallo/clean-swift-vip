@@ -15,6 +15,27 @@
 		D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D1244AA83300B2805E /* HomeViewController.swift */; };
 		D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D3244AA8C600B2805E /* HomeInteractor.swift */; };
 		D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D5244AA8E000B2805E /* HomePresenter.swift */; };
+		D700B9F9244AB20500B2805E /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9DA244AB20500B2805E /* JSONSerializer.swift */; };
+		D700B9FA244AB20500B2805E /* EnvironmentSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9DD244AB20500B2805E /* EnvironmentSetup.swift */; };
+		D700B9FB244AB20500B2805E /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9DF244AB20500B2805E /* ParameterEncoding.swift */; };
+		D700B9FC244AB20500B2805E /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9E0244AB20500B2805E /* URLParameterEncoding.swift */; };
+		D700B9FD244AB20500B2805E /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9E1244AB20500B2805E /* JSONParameterEncoder.swift */; };
+		D700B9FE244AB20500B2805E /* FormDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9E2244AB20500B2805E /* FormDataEncoding.swift */; };
+		D700BA07244AB20500B2805E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9ED244AB20500B2805E /* NetworkError.swift */; };
+		D700BA08244AB20500B2805E /* EndpointType.temp_caseinsensitive_rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9EF244AB20500B2805E /* EndpointType.temp_caseinsensitive_rename.swift */; };
+		D700BA09244AB20500B2805E /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F0244AB20500B2805E /* NetworkRouter.swift */; };
+		D700BA0A244AB20500B2805E /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F1244AB20500B2805E /* HTTPTask.swift */; };
+		D700BA0B244AB20500B2805E /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F2244AB20500B2805E /* NetworkResponse.swift */; };
+		D700BA0C244AB20500B2805E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F3244AB20500B2805E /* HTTPMethod.swift */; };
+		D700BA0D244AB20500B2805E /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F4244AB20500B2805E /* Webservice.swift */; };
+		D700BA0E244AB20500B2805E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F5244AB20500B2805E /* Response.swift */; };
+		D700BA0F244AB20500B2805E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F6244AB20500B2805E /* Request.swift */; };
+		D700BA10244AB20500B2805E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F7244AB20500B2805E /* Router.swift */; };
+		D700BA11244AB20500B2805E /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9F8244AB20500B2805E /* NetworkLogger.swift */; };
+		D700BA14244AB4F400B2805E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA13244AB4F400B2805E /* Extensions.swift */; };
+		D700BA17244AB59E00B2805E /* WebServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA15244AB59E00B2805E /* WebServiceAdapter.swift */; };
+		D700BA18244AB59E00B2805E /* GetWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA16244AB59E00B2805E /* GetWebService.swift */; };
+		D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA19244AB7A300B2805E /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +61,27 @@
 		D700B9D1244AA83300B2805E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D700B9D3244AA8C600B2805E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D700B9D5244AA8E000B2805E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D700B9DA244AB20500B2805E /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		D700B9DD244AB20500B2805E /* EnvironmentSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentSetup.swift; sourceTree = "<group>"; };
+		D700B9DF244AB20500B2805E /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		D700B9E0244AB20500B2805E /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		D700B9E1244AB20500B2805E /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		D700B9E2244AB20500B2805E /* FormDataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDataEncoding.swift; sourceTree = "<group>"; };
+		D700B9ED244AB20500B2805E /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D700B9EF244AB20500B2805E /* EndpointType.temp_caseinsensitive_rename.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.temp_caseinsensitive_rename.swift; sourceTree = "<group>"; };
+		D700B9F0244AB20500B2805E /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		D700B9F1244AB20500B2805E /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		D700B9F2244AB20500B2805E /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		D700B9F3244AB20500B2805E /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D700B9F4244AB20500B2805E /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		D700B9F5244AB20500B2805E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D700B9F6244AB20500B2805E /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		D700B9F7244AB20500B2805E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D700B9F8244AB20500B2805E /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		D700BA13244AB4F400B2805E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D700BA15244AB59E00B2805E /* WebServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceAdapter.swift; sourceTree = "<group>"; };
+		D700BA16244AB59E00B2805E /* GetWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetWebService.swift; sourceTree = "<group>"; };
+		D700BA19244AB7A300B2805E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +123,7 @@
 		D700B9A7244AA69400B2805E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D700BA12244AB4E000B2805E /* Common */,
 				D700B9CB244AA73400B2805E /* Data */,
 				D700B9CA244AA72700B2805E /* Domain */,
 				D700B9CC244AA73C00B2805E /* Presentation */,
@@ -113,6 +156,8 @@
 		D700B9CB244AA73400B2805E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D700BA19244AB7A300B2805E /* APIConstants.swift */,
+				D700B9D8244AB20500B2805E /* Networking */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -164,6 +209,96 @@
 			children = (
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D700B9D8244AB20500B2805E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9D9244AB20500B2805E /* Parsers */,
+				D700B9DB244AB20500B2805E /* Endpoints */,
+				D700B9DC244AB20500B2805E /* Setup */,
+				D700B9DE244AB20500B2805E /* Encoding */,
+				D700B9E3244AB20500B2805E /* WebService */,
+				D700B9EC244AB20500B2805E /* Errors */,
+				D700B9EE244AB20500B2805E /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D700B9D9244AB20500B2805E /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9DA244AB20500B2805E /* JSONSerializer.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		D700B9DB244AB20500B2805E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		D700B9DC244AB20500B2805E /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9DD244AB20500B2805E /* EnvironmentSetup.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		D700B9DE244AB20500B2805E /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9DF244AB20500B2805E /* ParameterEncoding.swift */,
+				D700B9E0244AB20500B2805E /* URLParameterEncoding.swift */,
+				D700B9E1244AB20500B2805E /* JSONParameterEncoder.swift */,
+				D700B9E2244AB20500B2805E /* FormDataEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		D700B9E3244AB20500B2805E /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				D700BA15244AB59E00B2805E /* WebServiceAdapter.swift */,
+				D700BA16244AB59E00B2805E /* GetWebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		D700B9EC244AB20500B2805E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9ED244AB20500B2805E /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		D700B9EE244AB20500B2805E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D700B9EF244AB20500B2805E /* EndpointType.temp_caseinsensitive_rename.swift */,
+				D700B9F0244AB20500B2805E /* NetworkRouter.swift */,
+				D700B9F1244AB20500B2805E /* HTTPTask.swift */,
+				D700B9F2244AB20500B2805E /* NetworkResponse.swift */,
+				D700B9F3244AB20500B2805E /* HTTPMethod.swift */,
+				D700B9F4244AB20500B2805E /* Webservice.swift */,
+				D700B9F5244AB20500B2805E /* Response.swift */,
+				D700B9F6244AB20500B2805E /* Request.swift */,
+				D700B9F7244AB20500B2805E /* Router.swift */,
+				D700B9F8244AB20500B2805E /* NetworkLogger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D700BA12244AB4E000B2805E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D700BA13244AB4F400B2805E /* Extensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,10 +402,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D700B9FC244AB20500B2805E /* URLParameterEncoding.swift in Sources */,
+				D700B9FB244AB20500B2805E /* ParameterEncoding.swift in Sources */,
+				D700BA0D244AB20500B2805E /* Webservice.swift in Sources */,
+				D700BA0E244AB20500B2805E /* Response.swift in Sources */,
+				D700BA11244AB20500B2805E /* NetworkLogger.swift in Sources */,
+				D700B9F9244AB20500B2805E /* JSONSerializer.swift in Sources */,
+				D700B9FA244AB20500B2805E /* EnvironmentSetup.swift in Sources */,
+				D700BA08244AB20500B2805E /* EndpointType.temp_caseinsensitive_rename.swift in Sources */,
+				D700B9FE244AB20500B2805E /* FormDataEncoding.swift in Sources */,
+				D700BA0B244AB20500B2805E /* NetworkResponse.swift in Sources */,
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
+				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
+				D700B9FD244AB20500B2805E /* JSONParameterEncoder.swift in Sources */,
+				D700BA0F244AB20500B2805E /* Request.swift in Sources */,
+				D700BA18244AB59E00B2805E /* GetWebService.swift in Sources */,
 				D700B9A9244AA69400B2805E /* AppDelegate.swift in Sources */,
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
+				D700BA0A244AB20500B2805E /* HTTPTask.swift in Sources */,
+				D700BA0C244AB20500B2805E /* HTTPMethod.swift in Sources */,
+				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,
+				D700BA10244AB20500B2805E /* Router.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
+				D700BA07244AB20500B2805E /* NetworkError.swift in Sources */,
+				D700BA09244AB20500B2805E /* NetworkRouter.swift in Sources */,
+				D700BA17244AB59E00B2805E /* WebServiceAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

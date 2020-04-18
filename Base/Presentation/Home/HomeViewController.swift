@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeDisplayLogic: class {
-    
+    func setupVIP()
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -19,18 +19,16 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupVIP()
     }
     
-    private func setup()
+    func setupVIP()
     {
         let presenter = HomePresenter.init(viewController: self)
         let interactor = HomeInteractor(presenter: presenter)
         self.interactor = interactor
     }
-
     
-
     /*
     // MARK: - Navigation
 
