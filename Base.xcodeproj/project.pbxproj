@@ -39,6 +39,7 @@
 		D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */; };
 		D700BA1E244ABB7300B2805E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1D244ABB7300B2805E /* Post.swift */; };
 		D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */; };
+		D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA4F244AC4C500B2805E /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsUseCase.swift; sourceTree = "<group>"; };
 		D700BA1D244ABB7300B2805E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsAdapter.swift; sourceTree = "<group>"; };
+		D700BA4F244AC4C500B2805E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				D700B9B1244AA69800B2805E /* Assets.xcassets */,
 				D700B9B3244AA69800B2805E /* LaunchScreen.storyboard */,
 				D700B9B6244AA69800B2805E /* Info.plist */,
+				D700BA4F244AC4C500B2805E /* SceneDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				D700B9FE244AB20500B2805E /* FormDataEncoding.swift in Sources */,
 				D700BA0B244AB20500B2805E /* NetworkResponse.swift in Sources */,
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
+				D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */,
 				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
 				D700B9FD244AB20500B2805E /* JSONParameterEncoder.swift in Sources */,
 				D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */,
