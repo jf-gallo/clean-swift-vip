@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeDisplayLogic: class {
     func setupVIP()
+    func display(posts: [PostViewModel])
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -31,6 +32,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         interactor.getPosts()
     }
     
+    func display(posts: [PostViewModel]){
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -41,4 +46,17 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     */
 
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }

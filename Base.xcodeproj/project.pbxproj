@@ -26,6 +26,7 @@
 		D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBD244AD88200E8134F /* Parameters.swift */; };
 		D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBF244AD8DD00E8134F /* Response.swift */; };
 		D76F3EC2244AE5A900E8134F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC1244AE5A900E8134F /* Router.swift */; };
+		D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC4244AEDF100E8134F /* PostViewModel.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		D76F3EBD244AD88200E8134F /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		D76F3EBF244AD8DD00E8134F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D76F3EC1244AE5A900E8134F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D76F3EC4244AEDF100E8134F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		D700B9CF244AA79600B2805E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D76F3EC3244AEDDE00E8134F /* ViewModels */,
 				D700B9D0244AA80500B2805E /* View */,
 				D700B9D1244AA83300B2805E /* HomeViewController.swift */,
 				D700B9D3244AA8C600B2805E /* HomeInteractor.swift */,
@@ -247,6 +250,14 @@
 			children = (
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		D76F3EC3244AEDDE00E8134F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D76F3EC4244AEDF100E8134F /* PostViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		EA085DA36DFC419E4C99D6FE /* Pods */ = {
@@ -428,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */,
 				D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */,
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
 				D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */,
