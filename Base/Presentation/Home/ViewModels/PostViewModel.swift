@@ -10,6 +10,10 @@ import Foundation
 
 struct PostViewModel {
     let model: Post
-    var isFavorite: Bool
-    var hasBeenRead: Bool
+    var isFavorite: Bool = false
+    var hasBeenRead: Bool = false
+    
+    init(model: Post) {
+        self.model = model
+    }
 }

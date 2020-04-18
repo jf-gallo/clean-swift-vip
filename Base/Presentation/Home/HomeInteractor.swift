@@ -32,8 +32,11 @@ final class HomeInteractor: HomeBusinessLogic {
         dependencies.getPosts.execute(request: nil) { [weak self] (response) in
             switch response {
             case .success(let posts):
+                self?.presenter?.present(posts: posts!)
                 break
             case .failure(let error):
+                self?.presenter?.present(failiure: error?.asAFError(orFailWith: "failed to get posts").errorDescription ?? "failed to get posts")
+
                 break
             }
         }

@@ -23,11 +23,22 @@ class HomePresenter: HomePresentationLogic {
     }
     
     func present(posts: [Post]) {
-        
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.viewController?.display(posts: strongSelf.getViewModels(from: posts))
+        }
     }
     
     func present(failiure: String) {
         
     }
-
+    
+    private func getViewModels(from posts: [Post]) -> [PostViewModel] {
+        let posts = posts.compactMap({ return PostViewModel(model: $0)})
+        // TODO ADD READ FLAG = False
+        return posts
+    }
+    
 }
