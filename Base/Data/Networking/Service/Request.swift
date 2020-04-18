@@ -1,6 +1,5 @@
 //
 //  NetworkRequester.swift
-//  jogo-ios
 //
 //  Created by Juan Felipe Gallo on 8/31/19.
 //  Copyright © 2019 jogo. All rights reserved.
@@ -9,7 +8,7 @@
 import Foundation
 
 struct WebServiceRequest<T: Codable> {
-        
+    
     struct Dependencies {
         let parser: JSONSerializer = JSONSerializer()
         let decoder: JSONDecoder = .init()
@@ -61,14 +60,20 @@ extension WebServiceRequest {
                     }
                     do {
                         guard !self.dependencies.parser.isArrayData(data: data) else {
-                            self.dependencies.parser.JSONizeArrayResponse(data: data)
+                            
+                            let arrayDict = self.dependencies.parser.JSONizeArrayResponse(data: data)
+                            let response: [T]? = arrayDict?.compactMap {  value in
+                                print(value)
+                                return T.parse(from: value)?.first
+                            }
+                            
                             let apiResponse = try self.dependencies.decoder.decode([T].self, from: responseData)
                             completion(.success(apiResponse))
                             return
                         }
                         
                         self.dependencies.parser.JSONizeSingleResponse(data: data)
-
+                        
                         let apiResponse = try self.dependencies.decoder.decode(T.self, from: responseData)
                         completion(.success([apiResponse]))
                         

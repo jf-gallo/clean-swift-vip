@@ -44,17 +44,21 @@ final class JSONSerializer {
          }
      }
      
-    func JSONizeArrayResponse(data: Data?)  {
+    @discardableResult func JSONizeArrayResponse(data: Data?) -> [Dictionary<String, Any>]?  {
          
          do {
              // make sure this JSON is in the format we expect
              if let jsonArray = try JSONSerialization.jsonObject(with: data!, options: []) as? [Dictionary<String, Any>] {
                  
-                 print("Received Array Yeison", jsonArray)
+                print("Received Array Yeison", jsonArray)
+                return jsonArray
+                
              }
          } catch let error as NSError {
              print("Failed to load: \(error.localizedDescription)")
          }
+        
+        return nil
      }
     
 }
