@@ -25,6 +25,20 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         tableView.reloadData()
     }
     
+    @IBAction func segmentDidChange(_ sender: UISegmentedControl) {
+        displayAll = !displayAll
+    }
+    
+    var displayAll: Bool = true {
+        willSet(newValue) {
+            if newValue == true {
+                interactor?.showAllPosts()
+            } else {
+                interactor?.filterFavoritePosts()
+            }
+        }
+    }
+    
     var interactor: HomeBusinessLogic?
     var posts: [PostViewModel]?
     
@@ -35,7 +49,37 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80.0
         
+        displayAll = true
         setupVIP()
+        setupUI()
+    }
+    
+    func setupUI(){
+        setupSegmentedControll()
+        setupNavigationBar()
+    }
+    
+    func setupSegmentedControll(){
+        
+        let selectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let unselectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor: Constants.GreenColor]
+        
+        segmentedControlOutlet.setTitleTextAttributes(unselectedTitleTextAttributes, for: .normal)
+        segmentedControlOutlet.setTitleTextAttributes(selectedTitleTextAttributes, for: .selected)
+        
+        segmentedControlOutlet.selectedSegmentTintColor = Constants.GreenColor
+        segmentedControlOutlet.layer.borderWidth = 2
+        segmentedControlOutlet.layer.borderColor = Constants.GreenColor.cgColor
+    }
+    
+    func setupNavigationBar(){
+        let refreshButton = UIBarButtonItem.init(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
+        refreshButton.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = refreshButton
+    }
+    
+    @objc func refresh() {
+        interactor?.getPosts()
     }
     
     func setupVIP()
@@ -67,12 +111,14 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts?.count ?? 1
+        return posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        cell.imageView?.image = posts?[indexPath.row].icon
         cell.textLabel?.text = posts?[indexPath.row].model.body
         cell.textLabel?.numberOfLines = 0 
         
@@ -80,8 +126,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+        return 70.0
     }
-    
-    
 }

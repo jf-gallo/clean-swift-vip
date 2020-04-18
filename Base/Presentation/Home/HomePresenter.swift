@@ -12,11 +12,17 @@ protocol HomePresentationLogic: class {
     var viewController: HomeDisplayLogic? { get }
     func present(posts: [Post])
     func present(failiure: String)
+    func presentFilteredPosts()
+    func presentAllPosts()
+    func deleteAllPosts()
 }
 
 class HomePresenter: HomePresentationLogic {
     
     weak var viewController: HomeDisplayLogic?
+
+    // Single Source of Truth
+    var posts: [PostViewModel]?
     
     init(viewController: HomeDisplayLogic){
         self.viewController = viewController
@@ -31,13 +37,26 @@ class HomePresenter: HomePresentationLogic {
         }
     }
     
+    func presentFilteredPosts() {
+        let filteredPosts = posts?.filter({ $0.isFavorite })
+        viewController?.display(posts: filteredPosts!)
+    }
+    
+    func presentAllPosts() {
+        viewController?.display(posts: posts!)
+    }
+    
+    func deleteAllPosts() {
+        viewController?.display(posts: [])
+    }
+    
     func present(failiure: String) {
         
     }
     
     private func getViewModels(from posts: [Post]) -> [PostViewModel] {
         let posts = posts.compactMap({ return PostViewModel(model: $0)})
-        // TODO ADD READ FLAG = False
+        self.posts = posts
         return posts
     }
     

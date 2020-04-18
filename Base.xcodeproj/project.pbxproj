@@ -27,6 +27,7 @@
 		D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EBF244AD8DD00E8134F /* Response.swift */; };
 		D76F3EC2244AE5A900E8134F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC1244AE5A900E8134F /* Router.swift */; };
 		D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3EC4244AEDF100E8134F /* PostViewModel.swift */; };
+		D7E08DAF244BB03F00AF6001 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DAE244BB03F00AF6001 /* Constants.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		D76F3EBF244AD8DD00E8134F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D76F3EC1244AE5A900E8134F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D76F3EC4244AEDF100E8134F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		D7E08DAE244BB03F00AF6001 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				D700BA13244AB4F400B2805E /* Extensions.swift */,
+				D7E08DAE244BB03F00AF6001 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
 				D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */,
 				D700B9A9244AA69400B2805E /* AppDelegate.swift in Sources */,
+				D7E08DAF244BB03F00AF6001 /* Constants.swift in Sources */,
 				D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */,
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
 				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,

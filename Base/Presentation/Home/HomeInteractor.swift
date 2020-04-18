@@ -15,13 +15,16 @@ struct InteractorDependencies {
 protocol HomeBusinessLogic {
     var dependencies: InteractorDependencies { get }
     func getPosts()
+    func filterFavoritePosts()
+    func showAllPosts()
+    func deleteAllPosts()
 }
 
 final class HomeInteractor: HomeBusinessLogic {
     
     let dependencies: InteractorDependencies
-    
     let presenter: HomePresentationLogic?
+    var posts: [Post]?
     
     init(presenter: HomePresentationLogic, dependencies: InteractorDependencies = .init()){
         self.presenter = presenter
@@ -29,17 +32,27 @@ final class HomeInteractor: HomeBusinessLogic {
     }
     
     func getPosts() {
-        dependencies.getPosts.execute(request: nil) { [weak self] (response) in
-            switch response {
-            case .success(let posts):
-                self?.presenter?.present(posts: posts!)
-                break
-            case .failure(let error):
-                self?.presenter?.present(failiure: error?.asAFError(orFailWith: "failed to get posts").errorDescription ?? "failed to get posts")
-
-                break
+            dependencies.getPosts.execute(request: nil) { [weak self] (response) in
+                switch response {
+                case .success(let posts):
+                    self?.presenter?.present(posts: posts!)
+                    break
+                case .failure(let error):
+                    self?.presenter?.present(failiure: error?.asAFError?.errorDescription ?? "failed to get posts")
+                    break
+                }
             }
-        }
     }
     
+    func filterFavoritePosts() {
+        presenter?.presentFilteredPosts()
+    }
+    
+    func showAllPosts() {
+        presenter?.presentAllPosts()
+    }
+    
+    func deleteAllPosts() {
+        presenter?.deleteAllPosts()
+    }
 }
