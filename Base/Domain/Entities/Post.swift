@@ -12,5 +12,5 @@ struct Post: Codable {
     let userId: Int
     let id: Int
     let title: String
-    let Body: String
+    let body: String
 }

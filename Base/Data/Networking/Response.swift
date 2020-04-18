@@ -1,17 +1,18 @@
 //
 //  Response.swift
+//  Base
 //
-//  Created by Juan Felipe Gallo on 9/24/19.
-//  Copyright © 2019 jogo. All rights reserved.
+//  Created by Juan Felipe Gallo on 4/18/20.
+//  Copyright © 2020 Juan Felipe Gallo. All rights reserved.
 //
 
 import Foundation
-
-typealias requestError = String
+import Alamofire
 
 enum ServiceResponse<T> {
     case success([T]?)
-    case failure(requestError?)
+    case failure(AFError?)
 }
 
 typealias serviceCompletion<T> = (ServiceResponse<T>) -> Void
+

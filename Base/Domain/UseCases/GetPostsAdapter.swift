@@ -7,10 +7,9 @@
 //
 
 import Foundation
+import Alamofire
 
-struct GetPostsDependencies: Dependencies {
-     var service = WebServiceRequest<Post>()
- }
+struct GetPostsDependencies: Dependencies {}
 
 final class GetPostsAdapter: GetPostsUseCase {
 
@@ -20,18 +19,16 @@ final class GetPostsAdapter: GetPostsUseCase {
         self.dependencies = dependencies
     }
     
-    func execute(request: RequestParameters?, completion: @escaping serviceCompletion<Post>) {
+    func execute(request: Parameters?, completion: @escaping serviceCompletion<Post>) {
         
-        let request = WebServiceAdapter.init(GetPostsService.get(parameters: request))
-        
-        dependencies.service.makeRequest(for: request) { (result) in
-            switch result {
-            case .success(let posts):
-                completion(.success(posts))
-            case .failure(let error):
-                completion(.failure(error))
+        AF.request("https://jsonplaceholder.typicode.com/posts").responseDecodable(of: [Post].self) { (response) in
+            
+            guard let posts = response.value else {
+                completion(.failure(response.error))
+                return
             }
+            
+            completion(.success(posts))
         }
-
     }
 }

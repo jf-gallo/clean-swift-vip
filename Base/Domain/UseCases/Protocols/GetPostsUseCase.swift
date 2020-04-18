@@ -13,5 +13,5 @@ protocol Dependencies {
 }
 protocol GetPostsUseCase {
     var dependencies: GetPostsDependencies { get }
-    func execute(request: RequestParameters?, completion: @escaping serviceCompletion<Post>)
+    func execute(request: Parameters?, completion: @escaping serviceCompletion<Post>)
 }
