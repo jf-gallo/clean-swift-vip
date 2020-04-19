@@ -2,7 +2,7 @@
 
 Master Detail iOS Application using swift 5 and [clean swift](https://clean-swift.com).
 
-UI Functionalities include:
+Functionalities include:
 * Refresh from service
 * Display all/favorites
 * Delete All
