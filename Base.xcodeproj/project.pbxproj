@@ -16,7 +16,6 @@
 		D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D1244AA83300B2805E /* HomeViewController.swift */; };
 		D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D3244AA8C600B2805E /* HomeInteractor.swift */; };
 		D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D5244AA8E000B2805E /* HomePresenter.swift */; };
-		D700BA14244AB4F400B2805E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA13244AB4F400B2805E /* Extensions.swift */; };
 		D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA19244AB7A300B2805E /* APIConstants.swift */; };
 		D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */; };
 		D700BA1E244ABB7300B2805E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700BA1D244ABB7300B2805E /* Post.swift */; };
@@ -73,7 +72,6 @@
 		D700B9D1244AA83300B2805E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D700B9D3244AA8C600B2805E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D700B9D5244AA8E000B2805E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		D700BA13244AB4F400B2805E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D700BA19244AB7A300B2805E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsUseCase.swift; sourceTree = "<group>"; };
 		D700BA1D244ABB7300B2805E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		D700BA12244AB4E000B2805E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D700BA13244AB4F400B2805E /* Extensions.swift */,
 				D7E08DAE244BB03F00AF6001 /* Constants.swift */,
 			);
 			path = Common;
@@ -515,7 +512,6 @@
 				D7E08DB9244BBAED00AF6001 /* DetailPresenter.swift in Sources */,
 				D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */,
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
-				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
 				D7E08DCB244C150100AF6001 /* GetUserUseCase.swift in Sources */,
 				D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */,

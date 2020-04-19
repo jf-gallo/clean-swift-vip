@@ -61,6 +61,11 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         postHasBeenViewed()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        comments = nil
+        tableView.reloadData()
+    }
+    
     func setupUI(){
         setupNavigationBar()
     }
@@ -115,13 +120,14 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments?.count ?? 0
+        return comments?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
         guard let comment = comments?[indexPath.row] else {
+            cell.textLabel?.text = "Loading comments..."
             return cell
         }
         cell.textLabel?.text = comment.body
