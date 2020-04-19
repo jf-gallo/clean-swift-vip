@@ -26,11 +26,11 @@ pod install
 
 ## Architecture details
 
-[Clean swift](https://clean-swift.com) is an Architectural approach that ensures code is structured in a clear and easy to undertand manner (see [screaming architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html)), and it also enforces SOLID principles.  The main objects of this design are:  View, Interactor, Presenter, Entity, Router, and UseCase. In a Clean design, Data flows one way in in a __V-I-P__ Cycle: 
+[Clean swift](https://clean-swift.com) is an Architectural approach that ensures code is structured in a clear and easy to undertand manner (see [screaming architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html)), and it also enforces SOLID principles.  The main objects of this design are:  View, Interactor, Presenter, Entity, Router and UseCase. In a Clean design, Data flows one way in a __V-I-P__ Cycle: 
 
 View -> Interactor -> Presenter -> View
 
-The __View__ informs the Interactor about an event. (ie: did press button)
+The __View__ informs the Interactor of an event and binds data if required. (ie: did press search button)
 
 The __Interactor__ uses the received data to gather the necessary data via UseCase.
 
