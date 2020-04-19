@@ -15,8 +15,6 @@ struct InteractorDependencies {
 protocol HomeBusinessLogic {
     var dependencies: InteractorDependencies { get }
     func getPosts()
-    func filterFavoritePosts()
-    func showAllPosts()
     func deleteAllPosts()
     var posts: [Post]! { get set }
     func update(post: Post)
@@ -46,15 +44,7 @@ final class HomeInteractor: HomeBusinessLogic {
                 }
             }
     }
-    
-    func filterFavoritePosts() {
-        presenter?.presentFilteredPosts()
-    }
-    
-    func showAllPosts() {
-        presenter?.presentAllPosts()
-    }
-    
+        
     func deleteAllPosts() {
         presenter?.deleteAllPosts()
     }

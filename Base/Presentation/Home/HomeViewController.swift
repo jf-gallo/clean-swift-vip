@@ -33,24 +33,22 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBAction func segmentDidChange(_ sender: UISegmentedControl) {
         displayAll = !displayAll
         tableView.reloadData()
-
     }
+
+    var posts: [PostViewModel]!
 
     var favoritePosts: [PostViewModel] {
         return posts.filter({ $0.isFavorite })
+    }
+    var tableViewPosts: [PostViewModel]? {
+        return displayAll ? posts : favoritePosts
     }
     
     var displayAll: Bool = true
     
     var interactor: HomeBusinessLogic?
     var router: HomeRoutingLogic?
-    
-    var posts: [PostViewModel]!
-    
-    var tableViewPosts: [PostViewModel]? {
-        return displayAll ? posts : favoritePosts
-    }
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
