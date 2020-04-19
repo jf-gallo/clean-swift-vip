@@ -13,6 +13,11 @@ protocol HomeDisplayLogic: class {
     func display(posts: [PostViewModel])
 }
 
+protocol PostUpdatesDelegate: AnyObject {
+    func postViewed(id: Int)
+    func toggleFavorite(id: Int, to value: Bool)
+}
+
 class HomeViewController: UIViewController, HomeDisplayLogic {
     
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
@@ -27,21 +32,24 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     @IBAction func segmentDidChange(_ sender: UISegmentedControl) {
         displayAll = !displayAll
+        tableView.reloadData()
+
+    }
+
+    var favoritePosts: [PostViewModel] {
+        return posts.filter({ $0.isFavorite })
     }
     
-    var displayAll: Bool = true {
-        willSet(newValue) {
-            if newValue == true {
-                interactor?.showAllPosts()
-            } else {
-                interactor?.filterFavoritePosts()
-            }
-        }
-    }
+    var displayAll: Bool = true
     
     var interactor: HomeBusinessLogic?
     var router: HomeRoutingLogic?
-    var posts: [PostViewModel]?
+    
+    var posts: [PostViewModel]!
+    
+    var tableViewPosts: [PostViewModel]? {
+        return displayAll ? posts : favoritePosts
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,37 +105,26 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.posts = posts
         tableView.reloadData()
     }
-    
-     // MARK: - Navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "goToDetail",
-            let destination = segue.destination as? DetailViewController,
-            let post = sender as? Post {
-            destination.post = post
-        }
-     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts?.count ?? 0
+        return tableViewPosts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        guard let post = posts?[indexPath.row] else {
+        guard let post = tableViewPosts?[indexPath.row] else {
             return cell
         }
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        cell.imageView?.image = post.icon
-        cell.textLabel?.text = posts?[indexPath.row].model.body
+        cell.imageView?.image = post.cellIcon
+        cell.textLabel?.text = post.model.body
         cell.textLabel?.numberOfLines = 0
         
-        if post.hasBeenRead {
+        if post.hasBeenRead && !post.isFavorite {
             cell.imageView?.tintColor = UIColor.white
         }
         
@@ -141,6 +138,37 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let post = posts?[indexPath.row] else { return }
-        router?.routeToDetail(post: post.model)
+        router?.routeToDetail(post: post)
     }
+}
+
+extension HomeViewController: PostUpdatesDelegate {
+    
+    func postViewed(id: Int) {
+        
+        guard let index = posts?.firstIndex(where: { $0.model.id == id}),
+        let toggle = posts?[index].hasBeenRead else {
+            assertionFailure("NO post with same id matched id received")
+            return
+            }
+        
+        posts?[index].hasBeenRead = !toggle
+        interactor?.update(post: posts[index].model)
+        
+        self.tableView.reloadData()
+    }
+    
+    func toggleFavorite(id: Int, to value: Bool) {
+        guard let index = posts?.firstIndex(where: { $0.model.id == id}) else {
+            assertionFailure("NO post with same id matched id received")
+            return
+            }
+        
+        posts?[index].isFavorite = value
+        interactor?.update(post: posts[index].model)
+        
+        self.tableView.reloadData()
+    }
+    
+    
 }

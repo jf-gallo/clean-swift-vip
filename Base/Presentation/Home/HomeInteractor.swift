@@ -18,13 +18,15 @@ protocol HomeBusinessLogic {
     func filterFavoritePosts()
     func showAllPosts()
     func deleteAllPosts()
+    var posts: [Post]! { get set }
+    func update(post: Post)
 }
 
 final class HomeInteractor: HomeBusinessLogic {
-    
     let dependencies: InteractorDependencies
     let presenter: HomePresentationLogic?
-    var posts: [Post]?
+    
+    var posts: [Post]!
     
     init(presenter: HomePresentationLogic, dependencies: InteractorDependencies = .init()){
         self.presenter = presenter
@@ -35,6 +37,7 @@ final class HomeInteractor: HomeBusinessLogic {
             dependencies.getPosts.execute(request: nil) { [weak self] (response) in
                 switch response {
                 case .success(let posts):
+                    self?.posts = posts
                     self?.presenter?.present(posts: posts!)
                     break
                 case .failure(let error):
@@ -55,4 +58,13 @@ final class HomeInteractor: HomeBusinessLogic {
     func deleteAllPosts() {
         presenter?.deleteAllPosts()
     }
+    
+    func update(post: Post) {
+        guard let index = posts.firstIndex(where: { $0.id == post.id}) else {
+                assertionFailure("NO post with same id matched id received")
+                return
+        }
+        posts?[index] = post
+    }
 }
+

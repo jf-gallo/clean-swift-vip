@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeRoutingLogic
 {
-    func routeToDetail(post: Post)
+    func routeToDetail(post: PostViewModel)
 }
 
 class HomeRouter: NSObject, HomeRoutingLogic
@@ -24,10 +24,11 @@ class HomeRouter: NSObject, HomeRoutingLogic
     
     // MARK: Routing
     
-    func routeToDetail(post: Post) {
+    func routeToDetail(post: PostViewModel) {
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         let destinationVC = storyboard.instantiateInitialViewController()?.children.first as! DetailViewController
         destinationVC.post = post
+        destinationVC.postUptadeDelegate = viewController
         navigateToViewController(source: viewController!, destination: destinationVC)
     }
     

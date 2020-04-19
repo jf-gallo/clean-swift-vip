@@ -11,20 +11,28 @@ import UIKit
 
 struct PostViewModel {
     let model: Post
-    var isFavorite: Bool = false
-    var hasBeenRead: Bool = true
+    var isFavorite: Bool
+    var hasBeenRead: Bool = false
     
-    var icon: UIImage? {
-        if isFavorite {
-            return UIImage.init(systemName: "star")
-        } else {
-            return hasBeenRead ? UIImage.init(systemName: "checkmark") : UIImage.init(systemName: "circle.fill")
+    var readIcon: UIImage {
+       return hasBeenRead ? UIImage.init(systemName: "checkmark")! : UIImage.init(systemName: "circle.fill")!
+    }
+    
+    var favoriteIcon: UIImage {
+        return isFavorite ? UIImage.init(systemName: "star")! : UIImage.init(systemName: "checkmark")!
+    }
+    
+    var cellIcon: UIImage {
+        
+        guard hasBeenRead else {
+            return self.readIcon
         }
+        
+        return self.favoriteIcon 
     }
     
-    init(model: Post) {
+    init(model: Post, isFavorite: Bool = false) {
         self.model = model
+        self.isFavorite = isFavorite
     }
-    
-    
 }

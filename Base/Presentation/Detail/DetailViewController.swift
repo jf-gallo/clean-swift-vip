@@ -13,10 +13,14 @@ protocol DetailDisplayLogic: class {
     func setupVIP()
     func display(user: User)
     func display(comments:[Comment])
+    func display(post: PostViewModel)
+    func postHasBeenViewed()
 }
 
+
+
 class DetailViewController: UIViewController, DetailDisplayLogic {
-        
+                
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var body: UITextView!
@@ -28,9 +32,11 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
     @IBAction func deleteAllButtonAction(_ sender: Any) {
     }
             
+    weak var postUptadeDelegate: PostUpdatesDelegate?
     var interactor: DetailBusinessLogic?
-    var post: Post?
+    var post: PostViewModel!
     var comments: [Comment]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,17 +48,35 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        guard let post = self.post else {
+            assertionFailure("No Post to Display!")
+            return
+        }
+        display(post: post)
+        postHasBeenViewed()
+    }
+    
     func setupUI(){
         setupNavigationBar()
     }
         
     func setupNavigationBar(){
-        let favoriteButton = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(setFavorite))
-        favoriteButton.tintColor = UIColor.white
+        let favoriteButton = UIBarButtonItem.init(image: post.favoriteIcon, style: .plain, target: self, action: #selector(setFavorite))
         self.navigationItem.rightBarButtonItem = favoriteButton
     }
     
     @objc func setFavorite() {
+        let isFavorite = post.isFavorite
+        post.isFavorite = !isFavorite
+        postUptadeDelegate?.toggleFavorite(id: post.model.id, to: !isFavorite)
+    }
+    
+    func postHasBeenViewed() {
+        if post.hasBeenRead {
+            return
+        }
+        postUptadeDelegate?.postViewed(id: post.model.id)
     }
     
     func setupVIP()
@@ -60,6 +84,11 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         let presenter = DetailPresenter.init(viewController: self)
         let interactor = DetailInteractor(presenter: presenter)
         self.interactor = interactor
+    }
+    
+    func display(post: PostViewModel) {
+        descriptionLabel.text = post.model.title
+        body.text = post.model.body
     }
     
     func display(user: User) {
@@ -70,17 +99,6 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         self.comments = comments
         tableView.reloadData()
     }
-        
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
