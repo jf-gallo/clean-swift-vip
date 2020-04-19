@@ -24,6 +24,9 @@ git clone https://github.com/huffmann/clean-swift-vip && cd clean-swift-vip
 pod install
 ```
 
+And finally to open project, open .xcworkspace file 
+
+
 ## Architecture details
 
 [Clean swift](https://clean-swift.com) is an Architectural approach that ensures code is structured in a clear and easy to undertand manner (see [screaming architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html)), and it also enforces SOLID principles.  The main objects of this design are:  View, Interactor, Presenter, Entity, Router and UseCase. In a Clean design, Data flows one way in a __V-I-P__ Cycle: 
