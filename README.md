@@ -12,7 +12,12 @@ UI Functionalities include:
 * REST Client
 
 ## Run instructions
+Donwload manually, or clone repository to you machine:
 
+ ```bash
+git clone https://github.com/huffmann/clean-swift-vip
+```
+ 
  In repository folder, Install Alamofire via [cocoapods](https://cocoapods.org) command:
 
 ```bash
