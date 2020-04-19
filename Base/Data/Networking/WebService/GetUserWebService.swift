@@ -13,7 +13,8 @@ final class GetUserWebService<T> where T: Decodable {
     func get(userId:Int, completion: @escaping serviceCompletion<T>) {
         
         print("Will execute request with UserID\(userId))")
-        AF.request(URLEndpoint.getUsers.url).responseDecodable(of: [T].self) { (response) in
+        
+        AF.request(URLEndpoint.getUsers.url+"?id=\(userId)").responseDecodable(of: [T].self) { (response) in
             print(response)
             guard let result = response.value else {
                 completion(.failure(response.error))
