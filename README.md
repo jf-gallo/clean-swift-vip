@@ -24,13 +24,16 @@ git clone https://github.com/huffmann/clean-swift-vip && cd clean-swift-vip
 pod install
 ```
 
+And finally to open project, open .xcworkspace file 
+
+
 ## Architecture details
 
-[Clean swift](https://clean-swift.com) is an Architecture where base classes are categorized as View, Interactor, Presenter, Entity, Router, and UseCase. In a Clean design, Data flows one way in in a __V-I-P__ Cycle: 
+[Clean swift](https://clean-swift.com) is an Architectural approach that ensures code is structured in a clear and easy to undertand manner (see [screaming architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html)), and it also enforces SOLID principles.  The main objects of this design are:  View, Interactor, Presenter, Entity, Router and UseCase. In a Clean design, Data flows one way in a __V-I-P__ Cycle: 
 
 View -> Interactor -> Presenter -> View
 
-The __View__ informs the Interactor about an event. (ie: did press button)
+The __View__ informs the Interactor of an event and binds data if required. (ie: did press search button)
 
 The __Interactor__ uses the received data to gather the necessary data via UseCase.
 
@@ -46,14 +49,16 @@ This Object type, has the dataModel as well as the required properties for corre
 
 ## Delegate Pattern 
 
-Used for communication between view controllers: inform of events, send data. 
+Protocol used for communication between view controllers: inform of events, send data. 
 
 labeled _weak_ to avoid retain cycles. 
 
 ## Web Services
 All REST API service calls are managed via [Alamofire](https://github.com/Alamofire/Alamofire), which is a robust, community driven, HTTP networking library written in Swift.
 
-For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) which is nicely integrated into Alamofire via __responseDecodable__ 
+For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) protocol which is neatly integrated into Alamofire via __responseDecodable__ 
+
+Each web service class is initialized with a __Generic__ Decodable class which will returned _async_ via completion handler. 
 
 ## Future Enhancements 
 I will work on moving user interface to SwiftUI and Combine instead of Interface builder. And from there...
