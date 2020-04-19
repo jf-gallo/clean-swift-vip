@@ -10,6 +10,7 @@ Functionalities include:
 * Toggle favorite
 * Swipe to remove
 * REST Client
+* Unit Tests
 
 ## Run instructions
 Donwload manually, or clone repository to you machine:
