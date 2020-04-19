@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GetPostsUseCase {
-    var dependencies: GetPostsDependencies { get }
-    func getAllPosts(completion: @escaping serviceCompletion<Post>)
+protocol GetUserUseCase {
+    var dependencies: GetUserDependencies { get }
+    func search(userId: Int, completion: @escaping serviceCompletion<User>)
 }

@@ -46,6 +46,10 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         
         setupVIP()
         setupUI()
+        
+        interactor?.getComments(for: post.model)
+        interactor?.getUser(for: post.model)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

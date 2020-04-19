@@ -32,27 +32,27 @@ final class HomeInteractor: HomeBusinessLogic {
     }
     
     func getPosts() {
-            dependencies.getPosts.execute(request: nil) { [weak self] (response) in
-                switch response {
-                case .success(let posts):
-                    self?.posts = posts
-                    self?.presenter?.present(posts: posts!)
-                    break
-                case .failure(let error):
-                    self?.presenter?.present(failiure: error?.asAFError?.errorDescription ?? "failed to get posts")
-                    break
-                }
+        dependencies.getPosts.getAllPosts() { [weak self] (response) in
+            switch response {
+            case .success(let posts):
+                self?.posts = posts
+                self?.presenter?.present(posts: posts!)
+                break
+            case .failure(let error):
+                self?.presenter?.present(failiure: error?.asAFError?.errorDescription ?? "failed to get posts")
+                break
             }
+        }
     }
-        
+    
     func deleteAllPosts() {
         presenter?.deleteAllPosts()
     }
     
     func update(post: Post) {
         guard let index = posts.firstIndex(where: { $0.id == post.id}) else {
-                assertionFailure("NO post with same id matched id received")
-                return
+            assertionFailure("NO post with same id matched id received")
+            return
         }
         posts?[index] = post
     }

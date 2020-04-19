@@ -11,6 +11,7 @@ import Foundation
 enum URLEndpoint: String  {
     case getPosts
     case getComments
+    case getUsers
 }
 
 extension URLEndpoint {
@@ -25,6 +26,8 @@ extension URLEndpoint {
             return "/comments"
         case .getPosts:
             return "/posts"
+        case .getUsers:
+            return "/users"
         }
     }
     

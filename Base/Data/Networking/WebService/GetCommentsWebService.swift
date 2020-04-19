@@ -9,10 +9,13 @@
 import Foundation
 import Alamofire
 
-final class GetPostsWebService<T> where T: Decodable {
+final class GetCommentsWebService<T> where T: Decodable {
     
-    func get(completion: @escaping serviceCompletion<T>) {
-        AF.request(URLEndpoint.getPosts.url).responseDecodable(of: [T].self) { (response) in
+    func getComments(for postId: Int, completion: @escaping serviceCompletion<T>) {
+        print("Will execute request with PostID \(postId))")
+
+        AF.request(URLEndpoint.getComments.url).responseDecodable(of: [T].self) { (response) in
+            print(response)
             guard let results = response.value else {
                 completion(.failure(response.error))
                 return

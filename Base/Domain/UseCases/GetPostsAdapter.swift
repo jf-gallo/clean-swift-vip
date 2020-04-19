@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GetPostsDependencies: Dependencies {
+struct GetPostsDependencies {
     let service = GetPostsWebService<Post>()
 }
 
@@ -20,9 +20,9 @@ final class GetPostsAdapter: GetPostsUseCase {
         self.dependencies = dependencies
     }
     
-    func execute(request: Parameters?, completion: @escaping serviceCompletion<Post>) {
+    func getAllPosts(completion: @escaping serviceCompletion<Post>) {
         
-        dependencies.service.get(request: request) { (response) in
+        dependencies.service.get() { (response) in
             switch response {
             case .success(let posts):
                 completion(.success(posts))

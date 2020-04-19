@@ -35,6 +35,12 @@
 		D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBA244BBEB500AF6001 /* Comment.swift */; };
 		D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBC244BBEBF00AF6001 /* User.swift */; };
 		D7E08DBF244BE44800AF6001 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBE244BE44800AF6001 /* HomeRouter.swift */; };
+		D7E08DC1244C12CA00AF6001 /* GetUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DC0244C12CA00AF6001 /* GetUserWebService.swift */; };
+		D7E08DC3244C12E200AF6001 /* GetCommentsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DC2244C12E200AF6001 /* GetCommentsWebService.swift */; };
+		D7E08DC5244C139E00AF6001 /* GetUserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DC4244C139E00AF6001 /* GetUserAdapter.swift */; };
+		D7E08DC7244C13CA00AF6001 /* GetCommentsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DC6244C13CA00AF6001 /* GetCommentsAdapter.swift */; };
+		D7E08DC9244C14ED00AF6001 /* GetCommnentsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DC8244C14ED00AF6001 /* GetCommnentsUseCase.swift */; };
+		D7E08DCB244C150100AF6001 /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DCA244C150100AF6001 /* GetUserUseCase.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +92,12 @@
 		D7E08DBA244BBEB500AF6001 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D7E08DBC244BBEBF00AF6001 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7E08DBE244BE44800AF6001 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D7E08DC0244C12CA00AF6001 /* GetUserWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserWebService.swift; sourceTree = "<group>"; };
+		D7E08DC2244C12E200AF6001 /* GetCommentsWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCommentsWebService.swift; sourceTree = "<group>"; };
+		D7E08DC4244C139E00AF6001 /* GetUserAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserAdapter.swift; sourceTree = "<group>"; };
+		D7E08DC6244C13CA00AF6001 /* GetCommentsAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCommentsAdapter.swift; sourceTree = "<group>"; };
+		D7E08DC8244C14ED00AF6001 /* GetCommnentsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCommnentsUseCase.swift; sourceTree = "<group>"; };
+		D7E08DCA244C150100AF6001 /* GetUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +206,8 @@
 			children = (
 				D700B9CE244AA78500B2805E /* Protocols */,
 				D700BA1F244ABBF300B2805E /* GetPostsAdapter.swift */,
+				D7E08DC4244C139E00AF6001 /* GetUserAdapter.swift */,
+				D7E08DC6244C13CA00AF6001 /* GetCommentsAdapter.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -202,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				D700BA1B244AB9F900B2805E /* GetPostsUseCase.swift */,
+				D7E08DC8244C14ED00AF6001 /* GetCommnentsUseCase.swift */,
+				D7E08DCA244C150100AF6001 /* GetUserUseCase.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -262,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				D76F3EBB244AD80000E8134F /* GetPostsWebService.swift */,
+				D7E08DC0244C12CA00AF6001 /* GetUserWebService.swift */,
+				D7E08DC2244C12E200AF6001 /* GetCommentsWebService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -480,27 +498,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E08DC9244C14ED00AF6001 /* GetCommnentsUseCase.swift in Sources */,
 				D76F3EC5244AEDF100E8134F /* PostViewModel.swift in Sources */,
 				D7E08DB5244BBA9600AF6001 /* DetailViewController.swift in Sources */,
 				D700BA1C244AB9F900B2805E /* GetPostsUseCase.swift in Sources */,
+				D7E08DC3244C12E200AF6001 /* GetCommentsWebService.swift in Sources */,
+				D7E08DC5244C139E00AF6001 /* GetUserAdapter.swift in Sources */,
 				D7E08DB7244BBADC00AF6001 /* DetailInteractor.swift in Sources */,
 				D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */,
 				D700BA50244AC4C500B2805E /* SceneDelegate.swift in Sources */,
 				D700BA1A244AB7A300B2805E /* APIConstants.swift in Sources */,
 				D700BA20244ABBF300B2805E /* GetPostsAdapter.swift in Sources */,
 				D700B9A9244AA69400B2805E /* AppDelegate.swift in Sources */,
+				D7E08DC7244C13CA00AF6001 /* GetCommentsAdapter.swift in Sources */,
 				D7E08DAF244BB03F00AF6001 /* Constants.swift in Sources */,
 				D7E08DB9244BBAED00AF6001 /* DetailPresenter.swift in Sources */,
 				D76F3EC0244AD8DD00E8134F /* Response.swift in Sources */,
 				D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */,
 				D700BA14244AB4F400B2805E /* Extensions.swift in Sources */,
 				D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */,
+				D7E08DCB244C150100AF6001 /* GetUserUseCase.swift in Sources */,
 				D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */,
 				D76F3EC2244AE5A900E8134F /* Router.swift in Sources */,
 				D700BA1E244ABB7300B2805E /* Post.swift in Sources */,
 				D76F3EBC244AD80000E8134F /* GetPostsWebService.swift in Sources */,
 				D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */,
 				D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */,
+				D7E08DC1244C12CA00AF6001 /* GetUserWebService.swift in Sources */,
 				D7E08DBF244BE44800AF6001 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

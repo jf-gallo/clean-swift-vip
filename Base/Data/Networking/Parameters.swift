@@ -7,5 +7,3 @@
 //
 
 import Foundation
-
-typealias Parameters = [String: Codable]
