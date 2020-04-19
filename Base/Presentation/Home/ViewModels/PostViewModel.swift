@@ -19,7 +19,7 @@ struct PostViewModel {
     }
     
     var favoriteIcon: UIImage {
-        return (isFavorite ?? false) ? UIImage.init(systemName: "star")! : UIImage.init(systemName: "checkmark")!
+        return (isFavorite ?? false) ? UIImage.init(systemName: "star.fill")! : UIImage.init(systemName: "star")!
     }
     
     var cellIcon: UIImage {
