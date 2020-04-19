@@ -27,7 +27,7 @@ final class HomeInteractor: HomeBusinessLogic {
     
     var posts: [Post]!
     
-    init(presenter: HomePresentationLogic, dependencies: InteractorDependencies = .init()){
+    init(presenter: HomePresentationLogic? = nil, dependencies: InteractorDependencies = .init()){
         self.presenter = presenter
         self.dependencies = dependencies
     }
@@ -47,16 +47,17 @@ final class HomeInteractor: HomeBusinessLogic {
     }
     
     func deleteAllPosts() {
+        self.posts = nil
         presenter?.deleteAllPosts()
     }
     
     func deletePost(at index: Int) {
+        guard index >= 0, index <= posts.count else { return }
          self.posts.remove(at: index)
      }
     
     func update(post: Post) {
         guard let index = posts.firstIndex(where: { $0.id == post.id}) else {
-            assertionFailure("NO post with same id matched id received")
             return
         }
         posts?[index] = post

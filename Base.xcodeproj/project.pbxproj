@@ -12,7 +12,7 @@
 		D700B9B0244AA69400B2805E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D700B9AE244AA69400B2805E /* Main.storyboard */; };
 		D700B9B2244AA69800B2805E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D700B9B1244AA69800B2805E /* Assets.xcassets */; };
 		D700B9B5244AA69800B2805E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D700B9B3244AA69800B2805E /* LaunchScreen.storyboard */; };
-		D700B9C0244AA69800B2805E /* BaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9BF244AA69800B2805E /* BaseTests.swift */; };
+		D700B9C0244AA69800B2805E /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9BF244AA69800B2805E /* HomeInteractorTests.swift */; };
 		D700B9D2244AA83300B2805E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D1244AA83300B2805E /* HomeViewController.swift */; };
 		D700B9D4244AA8C600B2805E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D3244AA8C600B2805E /* HomeInteractor.swift */; };
 		D700B9D6244AA8E000B2805E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B9D5244AA8E000B2805E /* HomePresenter.swift */; };
@@ -67,7 +67,7 @@
 		D700B9B4244AA69800B2805E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D700B9B6244AA69800B2805E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D700B9BB244AA69800B2805E /* BaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D700B9BF244AA69800B2805E /* BaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTests.swift; sourceTree = "<group>"; };
+		D700B9BF244AA69800B2805E /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		D700B9C1244AA69800B2805E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D700B9D1244AA83300B2805E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D700B9D3244AA8C600B2805E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		D700B9BE244AA69800B2805E /* BaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				D700B9BF244AA69800B2805E /* BaseTests.swift */,
+				D700B9BF244AA69800B2805E /* HomeInteractorTests.swift */,
 				D700B9C1244AA69800B2805E /* Info.plist */,
 			);
 			path = BaseTests;
@@ -529,7 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D700B9C0244AA69800B2805E /* BaseTests.swift in Sources */,
+				D700B9C0244AA69800B2805E /* HomeInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

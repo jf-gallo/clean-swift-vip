@@ -25,7 +25,7 @@ final class DetailInteractor: DetailBusinessLogic {
     let presenter: DetailPresentationLogic?
     var posts: [Post]?
     
-    init(presenter: DetailPresentationLogic, dependencies: DetailInteractorDependencies = .init()){
+    init(presenter: DetailPresentationLogic? = nil, dependencies: DetailInteractorDependencies = .init()){
         self.presenter = presenter
         self.dependencies = dependencies
     }
