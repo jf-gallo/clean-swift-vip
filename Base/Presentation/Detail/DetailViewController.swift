@@ -18,11 +18,18 @@ protocol DetailDisplayLogic: class {
 class DetailViewController: UIViewController, DetailDisplayLogic {
         
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var body: UITextView!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var website: UILabel!
     
     @IBAction func deleteAllButtonAction(_ sender: Any) {
     }
             
     var interactor: DetailBusinessLogic?
+    var post: Post?
     var comments: [Comment]?
     override func viewDidLoad() {
         super.viewDidLoad()

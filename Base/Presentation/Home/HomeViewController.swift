@@ -40,6 +40,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     
     var interactor: HomeBusinessLogic?
+    var router: HomeRoutingLogic?
     var posts: [PostViewModel]?
     
     override func viewDidLoad() {
@@ -87,6 +88,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         let presenter = HomePresenter.init(viewController: self)
         let interactor = HomeInteractor(presenter: presenter)
         self.interactor = interactor
+        self.router = HomeRouter(viewController: self)
         
         interactor.getPosts()
     }
@@ -96,15 +98,15 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         tableView.reloadData()
     }
     
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+
+        if segue.identifier == "goToDetail",
+            let destination = segue.destination as? DetailViewController,
+            let post = sender as? Post {
+            destination.post = post
+        }
      }
-     */
     
 }
 
@@ -134,5 +136,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let post = posts?[indexPath.row] else { return }
+        router?.routeToDetail(post: post.model)
     }
 }

@@ -34,6 +34,7 @@
 		D7E08DB9244BBAED00AF6001 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DB8244BBAED00AF6001 /* DetailPresenter.swift */; };
 		D7E08DBB244BBEB500AF6001 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBA244BBEB500AF6001 /* Comment.swift */; };
 		D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBC244BBEBF00AF6001 /* User.swift */; };
+		D7E08DBF244BE44800AF6001 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E08DBE244BE44800AF6001 /* HomeRouter.swift */; };
 		E777DCA17AEFB850432780E8 /* Pods_BaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE2FA11D0447D4789AF3BD /* Pods_BaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		D7E08DB8244BBAED00AF6001 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		D7E08DBA244BBEB500AF6001 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D7E08DBC244BBEBF00AF6001 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7E08DBE244BE44800AF6001 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				D700B9D1244AA83300B2805E /* HomeViewController.swift */,
 				D700B9D3244AA8C600B2805E /* HomeInteractor.swift */,
 				D700B9D5244AA8E000B2805E /* HomePresenter.swift */,
+				D7E08DBE244BE44800AF6001 /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				D76F3EBC244AD80000E8134F /* GetPostsWebService.swift in Sources */,
 				D76F3EBE244AD88200E8134F /* Parameters.swift in Sources */,
 				D7E08DBD244BBEBF00AF6001 /* User.swift in Sources */,
+				D7E08DBF244BE44800AF6001 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
