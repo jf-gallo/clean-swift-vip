@@ -15,7 +15,7 @@ Functionalities include:
 Donwload manually, or clone repository to you machine:
 
  ```bash
-git clone https://github.com/huffmann/clean-swift-vip
+git clone https://github.com/huffmann/clean-swift-vip && cd clean-swift-vip
 ```
  
  In repository folder, Install Alamofire via [cocoapods](https://cocoapods.org) command:
