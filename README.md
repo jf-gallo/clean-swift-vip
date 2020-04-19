@@ -46,14 +46,14 @@ This Object type, has the dataModel as well as the required properties for corre
 
 ## Delegate Pattern 
 
-Used for communication between view controllers: inform of events, send data. 
+Protocol used for communication between view controllers: inform of events, send data. 
 
 labeled _weak_ to avoid retain cycles. 
 
 ## Web Services
 All REST API service calls are managed via [Alamofire](https://github.com/Alamofire/Alamofire), which is a robust, community driven, HTTP networking library written in Swift.
 
-For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) which is nicely integrated into Alamofire via __responseDecodable__ 
+For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) protocol which is neatly integrated into Alamofire via __responseDecodable__ 
 
 ## Future Enhancements 
 I will work on moving user interface to SwiftUI and Combine instead of Interface builder. And from there...
