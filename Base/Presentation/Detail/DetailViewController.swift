@@ -96,7 +96,10 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
     }
     
     func display(user: User) {
-        
+        name.text = user.name
+        email.text = user.email
+        website.text = user.website
+        phone.text = user.phone
     }
     
     func display(comments: [Comment]) {
@@ -117,6 +120,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         guard let comment = comments?[indexPath.row] else {
             return cell
         }
+        cell.textLabel?.text = comment.body
         cell.textLabel?.numberOfLines = 0
                 
         return cell

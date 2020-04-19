@@ -31,24 +31,26 @@ final class DetailInteractor: DetailBusinessLogic {
     }
     
     func getComments(for post: Post) {
-        self.dependencies.getComments.search(for: post.id) { (response) in
+        self.dependencies.getComments.search(for: post.id) { [weak self] (response) in
             switch response {
             case .success(let comments):
-                //                presenter.displaySuccess
+                self?.presenter?.present(comments: comments!)
                 break
             case .failure(let error):
+                self?.presenter?.present(failiure: error.debugDescription)
                 break
             }
         }
     }
     
     func getUser(for post: Post) {
-        self.dependencies.getUser.search(userId: post.userId) { (response) in
+        self.dependencies.getUser.search(userId: post.userId) { [weak self] (response) in
             switch response {
             case .success(let user):
-                //                presenter.displaySuccess
+                self?.presenter?.present(user: user!.first!)
                 break
             case .failure(let error):
+                self?.presenter?.present(failiure: error!.localizedDescription ?? "Failed to get user" )
                 break
             }
         }

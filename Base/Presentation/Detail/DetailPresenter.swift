@@ -29,11 +29,11 @@ class DetailPresenter: DetailPresentationLogic {
     }
     
     func present(comments: [Comment]) {
-        
+        viewController?.display(comments: comments)
     }
     
     func present(user: User) {
-        
+        viewController?.display(user: user)
     }
     
     
