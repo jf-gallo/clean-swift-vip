@@ -11,6 +11,7 @@ import UIKit
 protocol HomeDisplayLogic: class {
     func setupVIP()
     func display(posts: [PostViewModel])
+    func deletePost(at index: Int)
 }
 
 protocol PostUpdatesDelegate: AnyObject {
@@ -19,7 +20,7 @@ protocol PostUpdatesDelegate: AnyObject {
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
-    
+        
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
     
     @IBOutlet weak var tableView: UITableView!
@@ -103,6 +104,10 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         self.posts = posts
         tableView.reloadData()
     }
+    
+    func deletePost(at index: Int) {
+        self.posts.remove(at: index)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -137,6 +142,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let post = posts?[indexPath.row] else { return }
         router?.routeToDetail(post: post)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete else {
+            return
+        }
+        deletePost(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
     }
 }
 

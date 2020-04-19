@@ -18,6 +18,7 @@ protocol HomeBusinessLogic {
     func deleteAllPosts()
     var posts: [Post]! { get set }
     func update(post: Post)
+    func deletePost(at index: Int)
 }
 
 final class HomeInteractor: HomeBusinessLogic {
@@ -48,6 +49,10 @@ final class HomeInteractor: HomeBusinessLogic {
     func deleteAllPosts() {
         presenter?.deleteAllPosts()
     }
+    
+    func deletePost(at index: Int) {
+         self.posts.remove(at: index)
+     }
     
     func update(post: Post) {
         guard let index = posts.firstIndex(where: { $0.id == post.id}) else {
