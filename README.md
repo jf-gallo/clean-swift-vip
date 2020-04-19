@@ -26,7 +26,7 @@ pod install
 
 ## Architecture details
 
-[Clean swift](https://clean-swift.com) is a VIPER Architecture  (View, Interactor, Presenter, Entity, Router) where Data flows one way in in a __V-I-P__ Cycle: 
+[Clean swift](https://clean-swift.com) is an Architecture where base classes are categorized as View, Interactor, Presenter, Entity, Router, and UseCase. In a Clean design, Data flows one way in in a __V-I-P__ Cycle: 
 
 View -> Interactor -> Presenter -> View
 
@@ -56,20 +56,11 @@ All REST API service calls are managed via [Alamofire](https://github.com/Alamof
 For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) which is nicely integrated into Alamofire via __responseDecodable__ 
 
 ## Future Enhancements 
-I will work on moving user interface to SwiftUI and Combine instead of Interface builder. But the viper remains as is. 
+I will work on moving user interface to SwiftUI and Combine instead of Interface builder.
 
-                         __      
-           ---_ ...... _/_ -    
-          /  .      ./ .'*\ \    
-          : '         /__-'   \. 
-         /                      )
-       _/                  >   .' 
-     /   .   .       _.-" /  .'   
-     \           __/"     /.'/|   
-       \ '--  .-" /     //' |\|  
-        \|  \ | /     //_ _ |/|
-         `.  \:     //|_ _ _|\|
-         | \/.    //  | _ _ |/| 
-          \_ | \/ /    \ _ _ \\\ 
-              \__/      \ _ _ \|\
-
+    \,`/ / 
+ _)..  `_
+( __  -\
+    '`.                  
+   ( \>_-_,   
+   _||_ ~-/ 
