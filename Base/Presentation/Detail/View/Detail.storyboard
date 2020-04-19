@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Post-->
         <scene sceneID="ZKd-kz-M1V">
             <objects>
                 <viewController id="7Qp-aq-HGU" customClass="DetailViewController" customModule="Base" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TqB-Fb-vvc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rj6-u9-830"/>
+                    <navigationItem key="navigationItem" title="Post" id="rj6-u9-830">
+                        <barButtonItem key="backBarButtonItem" title="_" id="9V9-Hc-cdp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="body" destination="Fcv-Ge-3tL" id="Y0o-R7-HtP"/>
                         <outlet property="descriptionLabel" destination="6ju-T7-dTl" id="rQr-It-bEs"/>
@@ -128,6 +130,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xih-dB-qgf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -67,7 +67,11 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
         
     func setupNavigationBar(){
         let favoriteButton = UIBarButtonItem.init(image: post.favoriteIcon, style: .plain, target: self, action: #selector(setFavorite))
-        self.navigationItem.rightBarButtonItem = favoriteButton
+        favoriteButton.tintColor = UIColor.white
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        navigationItem.rightBarButtonItem = favoriteButton
     }
     
     @objc func setFavorite() {

@@ -62,5 +62,4 @@ class HomePresenter: HomePresentationLogic {
         self.posts = posts
         return posts
     }
-    
 }
