@@ -11,15 +11,15 @@ import UIKit
 
 struct PostViewModel {
     let model: Post
-    var isFavorite: Bool
-    var hasBeenRead: Bool = false
+    var isFavorite: Bool?
+    var hasBeenRead: Bool = true
     
     var readIcon: UIImage {
-       return hasBeenRead ? UIImage.init(systemName: "checkmark")! : UIImage.init(systemName: "circle.fill")!
+        return UIImage.init(systemName: "circle.fill")!
     }
     
     var favoriteIcon: UIImage {
-        return isFavorite ? UIImage.init(systemName: "star")! : UIImage.init(systemName: "checkmark")!
+        return (isFavorite ?? false) ? UIImage.init(systemName: "star")! : UIImage.init(systemName: "checkmark")!
     }
     
     var cellIcon: UIImage {
@@ -31,8 +31,7 @@ struct PostViewModel {
         return self.favoriteIcon 
     }
     
-    init(model: Post, isFavorite: Bool = false) {
+    init(model: Post) {
         self.model = model
-        self.isFavorite = isFavorite
     }
 }

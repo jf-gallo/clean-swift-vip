@@ -38,7 +38,7 @@ class HomePresenter: HomePresentationLogic {
     }
     
     func presentFilteredPosts() {
-        let filteredPosts = posts?.filter({ $0.isFavorite })
+        let filteredPosts = posts?.filter({ $0.isFavorite ?? false })
         viewController?.display(posts: filteredPosts!)
     }
     

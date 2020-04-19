@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     var posts: [PostViewModel]!
 
     var favoritePosts: [PostViewModel] {
-        return posts.filter({ $0.isFavorite })
+        return posts.filter({ $0.isFavorite ?? false })
     }
     var tableViewPosts: [PostViewModel]? {
         return displayAll ? posts : favoritePosts
@@ -122,7 +122,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = post.model.body
         cell.textLabel?.numberOfLines = 0
         
-        if post.hasBeenRead && !post.isFavorite {
+        if post.hasBeenRead && !(post.isFavorite ?? false) {
             cell.imageView?.tintColor = UIColor.white
         }
         

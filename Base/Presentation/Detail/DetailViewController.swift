@@ -71,7 +71,7 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
     }
     
     @objc func setFavorite() {
-        let isFavorite = post.isFavorite
+        let isFavorite = post.isFavorite ?? false
         post.isFavorite = !isFavorite
         postUptadeDelegate?.toggleFavorite(id: post.model.id, to: !isFavorite)
     }
