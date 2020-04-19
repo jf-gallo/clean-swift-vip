@@ -38,10 +38,11 @@ __UseCases__ are where the _business logic_ resides. Here is where the app call 
 
 After getting result from useCase, Interactor informs presenter about result with the gathered data. 
 
-__Presenter__ formats this data to a ViewModel and sends it to __View__ to display. 
+__Presenter__ formats this data to a ViewModel and sends it to __View__ to consume. 
 
 __ViewModel__
-In this objects the app has the dataModel as well as the required properties for correct display, ie: icons, toggles, etc. 
+
+This Object type, has the dataModel as well as the required properties for correct display, ie: icons, toggles, etc. 
 
 ## Delegate Pattern 
 
