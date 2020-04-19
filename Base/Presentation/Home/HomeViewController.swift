@@ -126,6 +126,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.image = post.cellIcon
         cell.textLabel?.text = post.model.body
         cell.textLabel?.numberOfLines = 0
+        cell.selectionStyle = .none
         
         if post.hasBeenRead && !(post.isFavorite ?? false) {
             cell.imageView?.tintColor = UIColor.white
