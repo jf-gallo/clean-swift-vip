@@ -13,7 +13,7 @@ Functionalities include:
 * Unit Tests
 
 ## Run instructions
-Donwload manually, or clone repository to you machine:
+Donwload manually, or clone repository:
 
  ```bash
 git clone https://github.com/huffmann/clean-swift-vip && cd clean-swift-vip
