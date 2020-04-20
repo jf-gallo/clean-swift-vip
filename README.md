@@ -59,7 +59,7 @@ All REST API service calls are managed via [Alamofire](https://github.com/Alamof
 
 For service response _data parsing_, I used swift's [Decodable](https://developer.apple.com/documentation/swift/decodable) protocol which is neatly integrated into Alamofire via __responseDecodable__ 
 
-Each web service class is initialized with a __Generic__ Decodable class which will returned _async_ via completion handler. 
+The web service class binds a __Generic__ Decodable class which will returned _async_ via completion handler. 
 
 ## Future Enhancements 
 I will work on moving user interface to SwiftUI and Combine instead of Interface builder. And from there...
