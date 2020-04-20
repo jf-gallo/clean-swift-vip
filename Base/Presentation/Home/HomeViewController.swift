@@ -33,13 +33,14 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     @IBAction func segmentDidChange(_ sender: UISegmentedControl) {
         displayAll = !displayAll
+        deleteAllButton.isEnabled = displayAll
         tableView.reloadData()
     }
 
     var posts: [PostViewModel]!
 
     var favoritePosts: [PostViewModel] {
-        return posts.filter({ $0.isFavorite ?? false })
+        return (posts?.filter({ $0.isFavorite ?? false })) ?? []
     }
     var tableViewPosts: [PostViewModel]? {
         return displayAll ? posts : favoritePosts
