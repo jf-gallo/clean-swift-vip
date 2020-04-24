@@ -1,6 +1,6 @@
 # Clean Master Detail iOS 
 
-Master Detail iOS Application using swift 5 and [clean swift](https://clean-swift.com).
+Master Detail iOS Application using swift 5.
 
 Functionalities include:
 * Refresh from service
